@@ -1,3 +1,13 @@
+@font-face {
+    font-family: belweb;
+    src: url('../fonts/belweb.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/OpenSans.ttf');
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -11,4 +21,50 @@ header {
     border-bottom: 1px, solid rgba(255, 255, 255, 0.1);
     background: url('../images/header.jpg') no-repeat;
     background-size: 100%;
+}
+
+#logo {
+    width: 100px;
+    height: 50px;
+    float: left;
+    background: url('../images/hs-logo.png') no-repeat;
+    background-size: contain;
+}
+
+#name {
+    text-align: right;
+    font-family: belweb, sans-serif;
+    float: left;
+    margin-left: 15px;
+    font-size: 1.3em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#navi {
+    height: 50px;
+    float: right;
+    display: flex;
+    align-items: center;
+	flex-direction: row;
+}
+
+#navi a {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+}
+
+#navi a:hover {
+    background: #5e5e5e;
+}
+
+#navi a:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
