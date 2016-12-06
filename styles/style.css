@@ -8,6 +8,11 @@
     src: url('../fonts/OpenSans.ttf');
 }
 
+@font-face {
+    font-family: Exo;
+    src: url('../fonts/Exo.otf');
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -87,7 +92,8 @@ header {
 }
 
 .foot {
-    text-align: center;    
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 #video {
@@ -123,4 +129,61 @@ header {
 }
 #video img:focus {
   opacity: .2;
+}
+
+/*--------------------------------------- Стили для отобрадения колод -------------------------------------------------*/
+
+.decUnit {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    border: 1px solid rgba(225, 225, 225, 0.7);
+    margin-right: 6.365%;
+    margin-bottom: 20px;
+}
+
+.decUnit:nth-child(3n) {
+    margin-right: 0;
+}
+
+.decUnitTitle {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Exo, sans-serif;
+    font-size: 1.2em;
+}
+
+.decUnit img {
+    width: 50%;
+    height: 50%;
+}
+
+.decUnitType {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.decUnitDate {
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 10px;
+    color: #6a6747;
+    font-weight: bold;
+}
+
+.decUnitMore {
+    border: none;
+    padding: 5px 15px;
+    background-color: #696969;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #e6e09a;
+    text-decoration: none;
+}
+
+.decUnitMore:hover {
+    color: #fff;
+    background-color: #777777;
 }
