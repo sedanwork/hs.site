@@ -89,3 +89,38 @@ header {
 .foot {
     text-align: center;    
 }
+
+#video {
+  position: relative;
+  padding-bottom: 35%;
+}
+#video iframe {
+  position: absolute;
+  width: 560px;
+  height: 315px;
+}
+#video div {
+  position: absolute;
+  top: 0;
+  left: 560px;
+  width: 130px;
+  height: 315px;
+  padding: 0px;
+  overflow-y: scroll;
+}
+
+#video img {
+  width: calc(100% - (5px + 1px)*2);
+  padding: 5px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  opacity: .7;
+}
+
+#video img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+#video img:focus {
+  opacity: .2;
+}
