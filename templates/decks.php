@@ -2,7 +2,7 @@
     require_once("database.php");
     require_once("func.php");
     $link = db_connect();
-    $decs = decs_all($link);
+    $decks = decks_all($link);
 ?>
 <html>
 <head>
@@ -18,35 +18,35 @@
                 <a href="../index.html">KattyFisher</a>
             </div>
             <div id='navi'>
-                <a href="decs.php">decs</a> 
+                <a href="decks.php">decks</a> 
                 <a href="videos.html">videos</a> 
                 <a href="about_me.html">about_me</a> 
             </div>
         </div>
     </header>
     <div id='content'>
-        <h1>KattyFisher decs</h1>
-        <a href="../admin/index.php?action=add">Create dec</a>
+        <h1>KattyFisher decks</h1>
+        <a href="../admin/index.php?action=add">Create deck</a>
         <div>
             <div>
-                <?php foreach ($decs as $dec): ?>
-                    <div class="decUnit">
+                <?php foreach ($decks as $deck): ?>
+                    <div class="deckUnit">
 
-                        <div class="decUnitTitle">
-                            Колода: <?php echo $dec['title']; ?>
+                        <div class="deckUnitTitle">
+                            Колода: <?php echo $deck['title']; ?>
                         </div>          
 
-                        <div class="decUnitTitle">
-                            Тип колоды: <?php echo $dec['type']; ?>
+                        <div class="deckUnitTitle">
+                            Тип колоды: <?php echo $deck['type']; ?>
                         </div>
 
-                        <div class="decUnitTitle">
-                            Дата добавления: <?php echo $dec['date']; ?>
+                        <div class="deckUnitTitle">
+                            Дата добавления: <?php echo $deck['date']; ?>
                         </div>
 
-                         <img src="<?php echo $dec['img']; ?>"/>
+                         <img src="<?php echo $deck['img']; ?>"/>
 
-                        <a href="<?php echo $dec['img']; ?>" class="decUnitMore">
+                        <a href="<?php echo $deck['img']; ?>" class="deckUnitMore">
                          Подробнее
                         </a>
                     </div>

@@ -133,7 +133,7 @@ header {
 
 /*--------------------------------------- Стили для отобрадения колод -------------------------------------------------*/
 
-.decUnit {
+.deckUnit {
     float: left;
     width: 20%;
     padding: 5px;
@@ -142,11 +142,11 @@ header {
     margin-bottom: 20px;
 }
 
-.decUnit:nth-child(3n) {
+.deckUnit:nth-child(3n) {
     margin-right: 0;
 }
 
-.decUnitTitle {
+.deckUnitTitle {
     width: 100%;
     text-align: center;
     margin-top: 10px;
@@ -154,17 +154,17 @@ header {
     font-size: 1.2em;
 }
 
-.decUnit img {
+.deckUnit img {
     width: 50%;
     height: 50%;
 }
 
-.decUnitType {
+.deckUnitType {
     text-align: justify;
     margin-top: 10px;
 }
 
-.decUnitDate {
+.deckUnitDate {
     text-align: right;
     padding-right: 20px;
     margin-top: 10px;
@@ -172,7 +172,7 @@ header {
     font-weight: bold;
 }
 
-.decUnitMore {
+.deckUnitMore {
     border: none;
     padding: 5px 15px;
     background-color: #696969;
@@ -183,7 +183,7 @@ header {
     text-decoration: none;
 }
 
-.decUnitMore:hover {
+.deckUnitMore:hover {
     color: #fff;
     background-color: #777777;
 }
