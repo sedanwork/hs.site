@@ -26,31 +26,32 @@
     </header>
     <div id='content'>
         <h1>KattyFisher decs</h1>
+        <a href="../admin/index.php?action=add">Create dec</a>
         <div>
             <div>
-    <?php foreach ($decs as $dec): ?>
-        <div class="decUnit">
+                <?php foreach ($decs as $dec): ?>
+                    <div class="decUnit">
 
-            <div class="decUnitTitle">
-                Колода: <?php echo $dec['title']; ?>
-            </div>          
-           
-            <div class="decUnitTitle">
-                Тип колоды: <?php echo $dec['type']; ?>
+                        <div class="decUnitTitle">
+                            Колода: <?php echo $dec['title']; ?>
+                        </div>          
+
+                        <div class="decUnitTitle">
+                            Тип колоды: <?php echo $dec['type']; ?>
+                        </div>
+
+                        <div class="decUnitTitle">
+                            Дата добавления: <?php echo $dec['date']; ?>
+                        </div>
+
+                         <img src="<?php echo $dec['img']; ?>"/>
+
+                        <a href="<?php echo $dec['img']; ?>" class="decUnitMore">
+                         Подробнее
+                        </a>
+                    </div>
+                <?php endforeach; ?>
             </div>
-            
-            <div class="decUnitTitle">
-                Дата добавления: <?php echo $dec['date']; ?>
-            </div>
-            
-             <img src="<?php echo $dec['img']; ?>"/>
-            
-            <a href="<?php echo $dec['img']; ?>" class="decUnitMore">
-             Подробнее
-            </a>
-        </div>
-    <?php endforeach; ?>
-</div>
 
         </div>
 
