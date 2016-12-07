@@ -25,7 +25,7 @@
         <h1>KattyFisher heartstone site</h1>
     </div>
         <div>    
-                <form method="post" action="index.php?action=add">
+                <form method="post" action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>">
                     <label>
                         Название колоды:
                         <input type="text" name="title" value="<?=$deck['title']?>" class="form-item" autofocus required>

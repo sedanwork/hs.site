@@ -26,7 +26,7 @@
         $id = (int)$_GET['id'];
         
         if(!empty($_POST) && $id > 0){
-            decks_edit($link, $id, $_POST['title'], $_POST['img'], $_POST['tiype'], $_POST['date']);
+            deck_edit($link, $id, $_POST['title'], $_POST['img'], $_POST['type'], $_POST['date']);
             header("Location: index.php");
         }
         
