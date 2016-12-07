@@ -1,13 +1,13 @@
 <?php
-    require_once("database.php");
-    require_once("func.php");
+    require_once("edit/database.php");
+    require_once("edit/func.php");
     $link = db_connect();
     $decks = decks_all($link);
 ?>
 <html>
 <head>
     <meta charset="UTF-8">
-    <link href="../styles/style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <title>KattyFisher HS</title>
 </head>
 <body>
@@ -15,18 +15,18 @@
         <div id='headerInside'>
             <div id='logo'></div>
             <div id='name'>
-                <a href="../index.html">KattyFisher</a>
+                <a href="index.html">KattyFisher</a>
             </div>
             <div id='navi'>
                 <a href="decks.php">decks</a> 
                 <a href="videos.html">videos</a> 
-                <a href="about_me.html">about_me</a> 
+                <a href="about_me.html">about_me</a>
+                <a href="admin/index.php">edit</a>
             </div>
         </div>
     </header>
     <div id='content'>
         <h1>KattyFisher decks</h1>
-        <a href="../admin/index.php?action=add">Create deck</a>
         <div>
             <div>
                 <?php foreach ($decks as $deck): ?>

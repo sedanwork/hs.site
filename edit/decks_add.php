@@ -14,16 +14,17 @@
                 <a href="../index.html">KattyFisher</a>
             </div>
             <div id='navi'>
-                <a href="templates/decks.php">decks</a> 
-                <a href="templates/videos.html">videos</a> 
-                <a href="templates/about_me.html">about_me</a> 
+                <a href="../decks.php">decks</a> 
+                <a href="../videos.html">videos</a> 
+                <a href="../about_me.html">about_me</a>
+                <a href="../admin/index.php">edit</a>
             </div>
         </div>
     </header>
     <div id='content'>
         <h1>KattyFisher heartstone site</h1>
     </div>
-        <div>
+        <div>    
                 <form method="post" action="index.php?action=add">
                     <label>
                         Название колоды:

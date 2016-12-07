@@ -1,8 +1,9 @@
 <?php
-    require_once("../templates/database.php");
-    require_once("../templates/func.php");
+    require_once("../edit/database.php");
+    require_once("../edit/func.php");
 
     $link = db_connect();
+    $deck = ['id' => '', 'title' => '', 'img' => '', 'type' => '', 'date' => ''];                                           
     
     if(isset($_GET['action']))
         $action = $_GET['action'];
@@ -15,7 +16,7 @@
             header("Location: index.php");
         }
         
-        include("../templates/decks_add.php");
+        include("../edit/decks_add.php");
     }
 
     else if($action == "edit"){
@@ -30,7 +31,7 @@
         }
         
         $deck = deck_get($link, $id);
-        include("../templates/decks_add.php");
+        include("../edit/decks_add.php");
     }
 
     else if($action == "delete"){
@@ -41,7 +42,7 @@
 
     else{
         $deck = decks_all($link);
-        include("../templates/decks.php");
+        include("../edit/decks.php");
     }
 
 ?>
