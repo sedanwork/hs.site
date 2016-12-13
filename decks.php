@@ -25,27 +25,21 @@
             </div>
         </div>
     </header>
-    <div id='content'>
+    <div id="content_deck">
         <h1>KattyFisher decks</h1>
         <div>
             <div>
                 <?php foreach ($decks as $deck): ?>
                     <div class="deckUnit">
-
+                            <div class="decUnitImg">
+                                <img src="images/war.png"/>
+                            </div>
                         <div class="deckUnitTitle">
-                            Колода: <?php echo $deck['title']; ?>
-                        </div>          
-
-                        <div class="deckUnitTitle">
-                            Тип колоды: <?php echo $deck['type']; ?>
-                        </div>
-
-                        <div class="deckUnitTitle">
-                            Дата добавления: <?php echo $deck['date']; ?>
-                        </div>
-
-                         <img src="<?php echo $deck['img']; ?>"/>
-
+                            
+                            <?php echo $deck['title'];?> <?php echo $deck['date']; ?>
+                        </div> 
+                        
+                        
                         <a href="<?php echo $deck['img']; ?>" class="deckUnitMore">
                          Подробнее
                         </a>
