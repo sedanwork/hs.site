@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="../styles/style.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
     <title>KattyFisher HS</title>
 </head>
 <body>
@@ -28,11 +28,14 @@
     </header>
     <div id='content'>
         <h1>KattyFisher decks</h1>
-        <a href="../admin/index.php?action=add">Create deck</a>
-        <div>
+        
+        <div class="deckEdit"> 
+            
+            <a href="../admin/index.php?action=add" style="padding: 20;">Create deck</a>
+            
             <div>
                         <table class="admin-table">
-                            <tr>
+                            <tr style="color: grey;">
                                 <th>Title</th>
                                 <th>Img</th>
                                 <th>Type</th>
@@ -41,7 +44,7 @@
                                 <th></th>
                             </tr>
                 <?php foreach ($decks as $deck): ?>                            
-                            <tr>
+                            <tr class="deckEditTable">
                                 <th><?php echo $deck['title']?></th>
                                 <th><?php echo $deck['img']?></th>
                                 <th><?php echo $deck['type']?></th>

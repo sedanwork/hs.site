@@ -31,18 +31,19 @@
             <div>
                 <?php foreach ($decks as $deck): ?>
                     <div class="deckUnit">
-                            <div class="decUnitImg">
-                                <img src="images/war.png"/>
-                            </div>
-                        <div class="deckUnitTitle">
-                            
-                            <?php echo $deck['title'];?> <?php echo $deck['date']; ?>
-                        </div> 
                         
+                        <div class="deckUnitImg">
+                            <img src="images/<?=$deck['type']?>.png"/>
+                        </div>
+                        
+                        <div class="deckUnitTitle">
+                            <?php echo $deck['title'];?> <?php echo $deck['date']; ?>
+                        </div>
                         
                         <a href="<?php echo $deck['img']; ?>" class="deckUnitMore">
-                         Подробнее
+                            Подробнее
                         </a>
+                        
                     </div>
                 <?php endforeach; ?>
             </div>
