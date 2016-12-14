@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link href="../styles/style.css" rel="stylesheet">
     <title>KattyFisher HS</title>
+    
 </head>
 <body>
     <header>
@@ -23,35 +24,51 @@
     </header>
     <div id='content'>
         <h1>KattyFisher heartstone site</h1>
-    </div>
-        <div>    
-                <form method="post" action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>">
-                    <label>
-                        Название колоды:
-                        <input type="text" name="title" value="<?=$deck['title']?>" class="form-item" autofocus required>
-                    </label>
-                    <br>
-                     <label>
-                        Ссылка на скрин:
-                        <textarea class="form-item" name="img" required><?=$deck['img']?></textarea>
-                    </label>
-                    <br>
-                    <label>
-                        Тип колоды:
-                        <input type="text" name="type" value="<?=$deck['type']?>" class="form-item" autofocus required>
-                    </label>
-                    <br>
-                    <label>
-                        Дата добавления:
-                        <input type="date" name="date" value="<?=$deck['date']?>" class="form-item" required>
-                    </label>
-                    <br>
+                    <form method="post" action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>" enctype="multipart/form-data">
+                        <label>Название колоды:
+                            <div>
+                                <input type="text" name="title" value="<?=$deck['title']?>" class="form-item" autofocus required>
+                            </div>
+                        </label>
+                            <script type="text/javascript">
+                                function getName (str){
+                                if (str.lastIndexOf('\\')){
+                                    var i = str.lastIndexOf('\\')+1;
+                                }
+                                else{
+                                    var i = str.lastIndexOf('/')+1;
+                                }						
+                                var filename = str.slice(i);			
+                                var uploaded = document.getElementById("fileformlabel");
+                                uploaded.innerHTML = str;
+                                }
+                            </script>
+                        <label>Ссылка на скрин:
+                             <div class="form-item">
+                             <div id="fileformlabel"></div>
+                             <div class="selectbutton">Обзор</div>
+                             <input type="file" name="img" value="C:/xampp/htdocs/hs.site/".<?=$deck['img']?> id="upload"/>
+                             </div>
+                        </label>
+                  
+                        <label>Тип колоды:
+                            <div>
+                                <input type="text" name="type" value="<?=$deck['type']?>" class="form-item" required>
+                            </div>
+                        </label>
+                    
+                        <label>Дата добавления:
+                            <div>
+                                <input type="date" name="date" value="<?=$deck['date']?>" class="form-item" required>
+                            </div>
+                        </label>
+                    
                     
                     <input type="submit" value="Сохранить" class="btn">
                 </form>
             </div>    
     <footer>
-        <p>KattyFisher hs <br> Copyright &copy; 2016</p>
+        <p>KattyFisher hs &copy; 2016</p>
     </footer>
     
 </body>

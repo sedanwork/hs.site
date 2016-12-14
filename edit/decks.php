@@ -65,7 +65,7 @@
     </div>
     
     <footer>
-        <p class="foot">KattyFisher hs <br> Copyright &copy; 2016</p>
+        <p class="foot">KattyFisher hs &copy; 2016</p>
     </footer>
     
 </body>
